@@ -1,9 +1,8 @@
 <template>
   <div>
-    <h1>Hello Nuxt</h1>
+    <h1 class="title">Hello Nuxt</h1>
   </div>
 </template>
 
-<style>
-
+<style lang="sass">
 </style>

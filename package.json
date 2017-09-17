@@ -6,18 +6,30 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
     "start": "npm run build && nuxt start",
-    "generate": "nuxt generate",
+    "build": "NODE_ENV=production nuxt build",
+    "generate": "NODE_ENV=production nuxt generate",
     "deploy": "npm run generate && push-dir --dir=dist --branch=gh-pages --cleanup",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "test": "ava"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
   },
   "dependencies": {
     "@nuxtjs/sitemap": "^0.0.3",
     "nuxt": "latest"
   },
   "devDependencies": {
+    "ava": "^0.22.0",
     "babel-eslint": "^7.2.3",
     "eslint": "^4.3.0",
     "eslint-config-standard": "^10.2.1",
@@ -27,6 +39,7 @@
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
+    "jsdom": "^11.2.0",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6"
   }
