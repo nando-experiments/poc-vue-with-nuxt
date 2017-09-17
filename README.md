@@ -1,4 +1,4 @@
-# nuxt-poc
+# POC [VueJS](https://vuejs.org/) with [NuxtJS](https://nuxtjs.org/)
 
 > Nuxt.js project
 
