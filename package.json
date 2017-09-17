@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Nuxt.js project",
   "author": "Fernando Moreira <nandomoreira.me@gmail.com>",
+  "homepage": "/poc-vue-with-nuxt/",
   "private": true,
   "scripts": {
     "dev": "nuxt",
